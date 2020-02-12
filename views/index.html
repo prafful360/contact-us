@@ -5,14 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact US</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-title {
+  /* background-color: #d5d5d5; */
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+.section-title h1 {
+  /* background-color: red; */
+  display: inline-block;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 10px;
+  position: relative;
+  padding-bottom: 0px;
+}
+.section-title h1::before {
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 2px;
+  right: 30%;
+  background-color: #febd01;
+  bottom: 0px;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.contact-us {
+    padding: 100px 0px;
+    background-color: #f5f8fd;
+  }
+  .contact-us .section-title h1:before {
+    left: 30%;
+  }
+  .contact-us .contact-form {
+    background-color: #ffffff;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 40px;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+  }
+  .contact-us .contact-form .text {
+    /* background-color: #d5d5d5; */
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+  .contact-us .contact-form .text h2 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .contact-us .contact-form .text p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #838383;
+    margin: 0px;
+  }
+  .contact-us .contact-form .space-between {
+    justify-content: space-between;
+  }
+  .contact-us .contact-form .col-6 {
+    /* background-color: #d5d5d5; */
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+  .contact-us .contact-form .col-12 {
+    /* background-color: red; */
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .contact-us .contact-form .form-control {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .contact-us .contact-form textarea.form-control {
+    height: 140px;
+  }
+  .contact-us .contact-form .form-control::placeholder {
+    color: #838383;
+  }
+  .contact-us .contact-form .button {
+    /* background-color: #d5d5d5; */
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .contact-us .contact-form .button input {
+    border-radius: 4px;
+    /* border: 1px solid #000000; */
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    background-color: #febd01;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px #e8e8e8;
+  }
+  .contact-us .contact-form .button input:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  @media (max-width: 767px) {
+    .contact-us .contact-form {
+    padding: 40px 20px;
+  }
+  .contact-us .contact-form .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  }
+    </style>
 </head>
 <body>
-    <form>
+    <!-- <form>
         <input type="text" id="subject" placeholder="subject"/><br/>
         <input type="email" id="email" placeholder="Email"/><br>
         <textarea name="text" id="text" cols="30" rows="10"> </textarea> <br>
         <input type="submit" value="submit"/>
-    </form>
+    </form> -->
+    
+    <!-- Start Contact Us -->
+    <section class="contact-us" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="section-title text-center">
+              <h1>Get In Touch</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="contact-form">
+              <div class="row">
+                <div class="text">
+                  <h2>Drop us a message</h2>
+                  <p>We are here to help.</p>
+                </div>
+              </div>
+              <form>
+              <div class="row space-between">
+                <div class="col-6">
+                  <input type="text" class="form-control" id="subject" name="" placeholder="Name"/>
+                </div>
+                <div class="col-6">
+                  <input type="text" class="form-control" id="email" name="" placeholder="Email"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <textarea class="form-control" id="text" placeholder="Your Message"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="button text-right">
+                  <input type="submit" value="submit"></input>
+                </div>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Us -->
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script>
         $('form').on('submit', (e)=>{

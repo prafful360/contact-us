@@ -3,7 +3,7 @@ require("dotenv").config();
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-    host: "hostORG",
+    host: "mailgun",
     port: 587,
     secure: false,
     auth: {
@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
 function sendMail(email, subject, text){
     let mainOptions = {
         from: email,
-        to: "youremailID", //use your registered mailgun id here
+        to: "xxxxx@sddfsd.com", //use your registered mailgun id here
         subject,
         text,
     }
